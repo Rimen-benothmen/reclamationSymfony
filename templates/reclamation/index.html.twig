@@ -112,6 +112,17 @@
 </section>
 <div class="d-grid gap-2 col-6 mx-auto">
 <a class="btn btn-info" href="{{ path('app_reclamation_new') }}">Creer nouvelle</a>
+</div>
 
+
+<div class="container py-5">
+  <div class="d-flex justify-content-center">
+
+{% if reclamations|length > 1 %}
+    <div class="pagination">
+       <p class="theme-cl-2"> {{ knp_pagination_render(reclamations) }}</p>
+    </div>
+{% endif %}
+</div>
 </div>
 {% endblock %}
